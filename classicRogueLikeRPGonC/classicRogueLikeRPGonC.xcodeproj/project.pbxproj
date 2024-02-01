@@ -66,8 +66,8 @@
 				DD8DEA522B6A7F960098AF62 /* main.c */,
 				DD95BA2C2B6B4DC000237AC9 /* player.c */,
 				DD90DBBF2B6BEB02004CD5CB /* engine.c */,
-				DD8DEA512B6A7F960098AF62 /* Makefile */,
 				DD95BA292B6B4C9400237AC9 /* rogue.h */,
+				DD8DEA512B6A7F960098AF62 /* Makefile */,
 			);
 			path = classicRogueLikeRPGonC;
 			sourceTree = "<group>";

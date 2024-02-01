@@ -13,7 +13,7 @@ void gameLoop(void) {
     
     mvaddch(player->position.y, player->position.x, player->character);
     
-    while (character = getch()) { // getch() - will get single character from the keyboard and return it without pressing "Enter"
+    while ((character = getch())) { // getch() - will get single character from the keyboard and return it without pressing "Enter"
         
         // We use one equation operator because otherwise loop will break after single button to press
         
