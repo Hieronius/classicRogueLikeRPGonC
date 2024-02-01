@@ -20,16 +20,16 @@ Entity *createPlayer(Position startPosition) {
 void handleInput(int input) {
     switch(input) {
         case 'w': // move up
-            player->position.y--;
+            player->position.y -= 1;
             break;
         case 's': // move down
-            player->position.y++;
+            player->position.y += 1;
             break;
         case 'a': // move left
-            player->position.x--;
+            player->position.x -= 1;
             break;
         case 'd': // move right
-            player->position.x++;
+            player->position.x += 1;
             break;
         default:
             break;
