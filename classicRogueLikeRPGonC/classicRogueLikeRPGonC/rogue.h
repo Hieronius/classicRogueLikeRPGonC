@@ -1,10 +1,3 @@
-//
-//  rogue.h
-//  classicRogueLikeRPGonC
-//
-//  Created by Арсентий Халимовский on 31.01.2024.
-//
-
 #ifndef rogue_h
 #define rogue_h
 
@@ -20,6 +13,13 @@ typedef struct {
     Position position; // current hero's position
     char character; // representation of the hero on screen
 } Entity;
+
+// player.c functions
+Entity *createPlayer(Position startPosition);
+void handleInput(int input);
+
+// externals files between all users of <rogue.h>
+extern Entity *player;
 
 
 #endif /* rogue_h */

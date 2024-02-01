@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DD8DEA532B6A7F960098AF62 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = DD8DEA522B6A7F960098AF62 /* main.c */; };
+		DD95BA252B6B3C1D00237AC9 /* player.c in Sources */ = {isa = PBXBuildFile; fileRef = DD95BA242B6B3C1D00237AC9 /* player.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,7 @@
 		DD8DEA512B6A7F960098AF62 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Makefile; path = src/Makefile; sourceTree = SOURCE_ROOT; };
 		DD8DEA522B6A7F960098AF62 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = main.c; path = src/main.c; sourceTree = SOURCE_ROOT; };
 		DD8DEA542B6A994A0098AF62 /* rogue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rogue.h; sourceTree = "<group>"; };
+		DD95BA242B6B3C1D00237AC9 /* player.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = player.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +62,9 @@
 			isa = PBXGroup;
 			children = (
 				DD8DEA522B6A7F960098AF62 /* main.c */,
-				DD8DEA512B6A7F960098AF62 /* Makefile */,
+				DD95BA242B6B3C1D00237AC9 /* player.c */,
 				DD8DEA542B6A994A0098AF62 /* rogue.h */,
+				DD8DEA512B6A7F960098AF62 /* Makefile */,
 			);
 			path = classicRogueLikeRPGonC;
 			sourceTree = "<group>";
@@ -123,6 +126,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD95BA252B6B3C1D00237AC9 /* player.c in Sources */,
 				DD8DEA532B6A7F960098AF62 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
