@@ -24,6 +24,10 @@ void cursesSetup(void);
 void gameLoop(void);
 void closeGame(void);
 
+// map.c functions
+Tile **createMapTiles(void);
+void freeMap(void);
+
 // player.c functions
 Entity *createPlayer(Position startPosition);
 void handleInput(int input);
