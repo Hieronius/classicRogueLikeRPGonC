@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DD8DEA532B6A7F960098AF62 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = DD8DEA522B6A7F960098AF62 /* main.c */; };
-		DD95BA282B6B490800237AC9 /* player.c in Sources */ = {isa = PBXBuildFile; fileRef = DD95BA262B6B490800237AC9 /* player.c */; };
+		DD90DBC02B6BEB02004CD5CB /* engine.c in Sources */ = {isa = PBXBuildFile; fileRef = DD90DBBF2B6BEB02004CD5CB /* engine.c */; };
+		DD95BA2D2B6B4DC000237AC9 /* player.c in Sources */ = {isa = PBXBuildFile; fileRef = DD95BA2C2B6B4DC000237AC9 /* player.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,8 +28,9 @@
 		DD8DEA472B6A76710098AF62 /* classicRogueLikeRPGonC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = classicRogueLikeRPGonC; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD8DEA512B6A7F960098AF62 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Makefile; path = src/Makefile; sourceTree = SOURCE_ROOT; };
 		DD8DEA522B6A7F960098AF62 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = main.c; path = src/main.c; sourceTree = SOURCE_ROOT; };
-		DD95BA262B6B490800237AC9 /* player.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = player.c; path = src/player.c; sourceTree = SOURCE_ROOT; };
-		DD95BA272B6B490800237AC9 /* rogue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rogue.h; path = src/rogue.h; sourceTree = SOURCE_ROOT; };
+		DD90DBBF2B6BEB02004CD5CB /* engine.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = engine.c; path = src/engine.c; sourceTree = SOURCE_ROOT; };
+		DD95BA292B6B4C9400237AC9 /* rogue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rogue.h; path = src/include/rogue.h; sourceTree = SOURCE_ROOT; };
+		DD95BA2C2B6B4DC000237AC9 /* player.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = player.c; path = src/player.c; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				DD8DEA522B6A7F960098AF62 /* main.c */,
+				DD95BA2C2B6B4DC000237AC9 /* player.c */,
+				DD90DBBF2B6BEB02004CD5CB /* engine.c */,
 				DD8DEA512B6A7F960098AF62 /* Makefile */,
-				DD95BA262B6B490800237AC9 /* player.c */,
-				DD95BA272B6B490800237AC9 /* rogue.h */,
+				DD95BA292B6B4C9400237AC9 /* rogue.h */,
 			);
 			path = classicRogueLikeRPGonC;
 			sourceTree = "<group>";
@@ -126,8 +129,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD95BA282B6B490800237AC9 /* player.c in Sources */,
+				DD95BA2D2B6B4DC000237AC9 /* player.c in Sources */,
 				DD8DEA532B6A7F960098AF62 /* main.c in Sources */,
+				DD90DBC02B6BEB02004CD5CB /* engine.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
