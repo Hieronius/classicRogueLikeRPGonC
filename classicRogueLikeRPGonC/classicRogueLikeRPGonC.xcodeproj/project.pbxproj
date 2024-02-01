@@ -26,6 +26,7 @@
 		DD8DEA472B6A76710098AF62 /* classicRogueLikeRPGonC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = classicRogueLikeRPGonC; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD8DEA512B6A7F960098AF62 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Makefile; path = src/Makefile; sourceTree = SOURCE_ROOT; };
 		DD8DEA522B6A7F960098AF62 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = main.c; path = src/main.c; sourceTree = SOURCE_ROOT; };
+		DD8DEA542B6A994A0098AF62 /* rogue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rogue.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +61,7 @@
 			children = (
 				DD8DEA522B6A7F960098AF62 /* main.c */,
 				DD8DEA512B6A7F960098AF62 /* Makefile */,
+				DD8DEA542B6A994A0098AF62 /* rogue.h */,
 			);
 			path = classicRogueLikeRPGonC;
 			sourceTree = "<group>";
