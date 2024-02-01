@@ -1,8 +1,8 @@
 CC = gcc
-CFLAGS = -lncurses
+CFLAGS = -lncurses -I./include/
 SOURCES = *.c
 
-all: rogue run clean # compile and run the program and after clean it if there is no error
+all: rogue # compile and run the program and after clean it if there is no error
 
 rogue:
 	$(CC) $(SOURCES) $(CFLAGS) -o rogue
