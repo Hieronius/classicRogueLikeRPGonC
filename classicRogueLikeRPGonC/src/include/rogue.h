@@ -14,6 +14,11 @@ typedef struct {
     char character; // representation of the hero on screen
 } Entity;
 
+// engine.c functions
+void cursesSetup(void);
+void gameLoop(void);
+void closeGame(void);
+
 // player.c functions
 Entity *createPlayer(Position startPosition);
 void handleInput(int input);
