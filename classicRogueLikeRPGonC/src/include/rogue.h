@@ -23,6 +23,11 @@ typedef struct {
 
 // MARK: - Methods
 
+// draw.c functions
+void drawMap(void);
+void drawEntity(Entity* entity);
+void drawEverything(void);
+
 // engine.c functions
 void cursesSetup(void);
 void gameLoop(void);
