@@ -40,6 +40,7 @@ void freeMap(void);
 // player.c functions
 Entity *createPlayer(Position startPosition);
 void handleInput(int input);
+void movePlayer(Position newPosition);
 
 // MARK: - Externals
 
