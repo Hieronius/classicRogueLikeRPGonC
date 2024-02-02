@@ -21,6 +21,18 @@ Tile **createMapTiles(void) { // return two dimensional array of MapTiles
     return tiles;
 }
 
+Position setupMap(void) {
+    Position startPosition = {10, 50};
+    
+    for (int y = 5; y < 15; y++) {
+        for (int x = 40; x < 60; x++) {
+            (*(*(map + y) + x)).character = '.';
+            (*(*(map + y) + x)).walkable = true;
+        }
+    }
+    return startPosition;
+}
+
 void freeMap(void) {
     
     // free first row of the map tiles
