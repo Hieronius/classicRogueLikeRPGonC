@@ -4,6 +4,8 @@
 #include <ncurses.h>
 #include <stdlib.h>
 
+// MARK: - Structs
+
 typedef struct {
     int y;
     int x;
@@ -19,6 +21,8 @@ typedef struct {
     char character; // representation of the hero on screen
 } Entity;
 
+// MARK: - Methods
+
 // engine.c functions
 void cursesSetup(void);
 void gameLoop(void);
@@ -31,6 +35,8 @@ void freeMap(void);
 // player.c functions
 Entity *createPlayer(Position startPosition);
 void handleInput(int input);
+
+// MARK: - Externals
 
 // externals files between all users of <rogue.h>
 extern const int MAP_HEIGHT;
