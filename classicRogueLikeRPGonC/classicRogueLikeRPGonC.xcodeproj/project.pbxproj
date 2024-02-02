@@ -17,6 +17,7 @@
 		DD9712852B6C6DAF00F8ED2A /* draw.c in Sources */ = {isa = PBXBuildFile; fileRef = DD9712772B6C6A7C00F8ED2A /* draw.c */; };
 		DD9712862B6C6DAF00F8ED2A /* rogue.h in Sources */ = {isa = PBXBuildFile; fileRef = DD95BA292B6B4C9400237AC9 /* rogue.h */; };
 		DD9712872B6C6DB800F8ED2A /* libncurses.tbd in Sources */ = {isa = PBXBuildFile; fileRef = DD97127A2B6C6B0E00F8ED2A /* libncurses.tbd */; };
+		DD9712892B6C814800F8ED2A /* room.c in Sources */ = {isa = PBXBuildFile; fileRef = DD9712882B6C814800F8ED2A /* room.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,7 @@
 		DD95BA2C2B6B4DC000237AC9 /* player.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = player.c; path = src/player.c; sourceTree = SOURCE_ROOT; };
 		DD9712772B6C6A7C00F8ED2A /* draw.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = draw.c; path = src/draw.c; sourceTree = SOURCE_ROOT; };
 		DD97127A2B6C6B0E00F8ED2A /* libncurses.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libncurses.tbd; path = usr/lib/libncurses.tbd; sourceTree = SDKROOT; };
+		DD9712882B6C814800F8ED2A /* room.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = room.c; path = src/room.c; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				DD90DBBF2B6BEB02004CD5CB /* engine.c */,
 				DD90DBC32B6BF231004CD5CB /* map.c */,
 				DD9712772B6C6A7C00F8ED2A /* draw.c */,
+				DD9712882B6C814800F8ED2A /* room.c */,
 				DD95BA292B6B4C9400237AC9 /* rogue.h */,
 				DD8DEA512B6A7F960098AF62 /* Makefile */,
 			);
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD9712892B6C814800F8ED2A /* room.c in Sources */,
 				DD9712872B6C6DB800F8ED2A /* libncurses.tbd in Sources */,
 				DD9712812B6C6DAF00F8ED2A /* main.c in Sources */,
 				DD9712822B6C6DAF00F8ED2A /* player.c in Sources */,
