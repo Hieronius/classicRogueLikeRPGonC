@@ -11,7 +11,7 @@ void cursesSetup(void) {
 void gameLoop(void) {
     int character; // variable to store user's input
     
-    mvaddch(player->position.y, player->position.x, player->character);
+    drawEverything(); // clean the screen, draw map and the player.
     
     while ((character = getch())) { // getch() - will get single character from the keyboard and return it without pressing "Enter"
         
@@ -23,8 +23,7 @@ void gameLoop(void) {
         }
         
         handleInput(character);
-        clear();
-        mvaddch(player->position.y, player->position.x, player->character);
+        drawEverything();
     }
 }
 
