@@ -7,11 +7,13 @@ Entity *player; // external variable from rogue.h
 Tile **map;
 
 int main(void) {
+    
+    Position startPosition;
     cursesSetup();
     
-    Position startPosition = {10,20};
-    player = createPlayer(startPosition);
     map = createMapTiles();
+    startPosition = setupMap();
+    player = createPlayer(startPosition);
     
     gameLoop();
     closeGame();
