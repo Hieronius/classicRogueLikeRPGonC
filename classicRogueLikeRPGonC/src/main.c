@@ -11,6 +11,8 @@ int main(void) {
     Position startPosition;
     cursesSetup();
     
+    srand(time(NULL)); // create a seed for rand function so each run of the programm we will get different random generation
+    
     map = createMapTiles();
     startPosition = setupMap();
     player = createPlayer(startPosition);
