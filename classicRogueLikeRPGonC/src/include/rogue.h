@@ -3,6 +3,7 @@
 
 #include <ncurses.h>
 #include <stdlib.h>
+#include <time.h>
 
 // MARK: - Structs
 
@@ -29,6 +30,10 @@ typedef struct {
 } Entity;
 
 // MARK: - Methods
+
+// room.c functions
+Room createRoom(int y, int x, int height, int width);
+void addRoomToMap(Room room);
 
 // draw.c functions
 void drawMap(void);
