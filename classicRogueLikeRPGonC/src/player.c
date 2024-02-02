@@ -18,20 +18,35 @@ Entity *createPlayer(Position startPosition) {
 }
 
 void handleInput(int input) {
+    
+    // get current Player position
+    Position newPosition = {player->position.y, player->position.x};
+    
+    // process the input
     switch(input) {
         case 'w': // move up
-            player->position.y -= 1;
+            newPosition.y--;
             break;
         case 's': // move down
-            player->position.y += 1;
+            newPosition.y++;
             break;
         case 'a': // move left
-            player->position.x -= 1;
+            newPosition.x--;
             break;
         case 'd': // move right
-            player->position.x += 1;
+            newPosition.x++;
             break;
         default:
             break;
+    }
+    
+    // return new coordinates to the players if tile to step is walkable
+    movePlayer(newPosition);
+}
+
+void movePlayer(Position newPosition) {
+    if ((*(*(map + newPosition.y) + newPosition.x)).walkable) {
+        player->position.y = newPosition.y;
+        player->position.x = newPosition.x;
     }
 }
