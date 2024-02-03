@@ -44,6 +44,10 @@ Position setupMap(void) {
         
         *(rooms + i) = createRoom(y, x, height, width);
         addRoomToMap(*(rooms + i));
+        
+        if (i > 0) { // i > 0 because we should wait for creation of first room to start monitoring all possible ways to connect second, third and so on rooms
+            connectRoomCenters((*(rooms + i - 1)).center, (*(rooms + i)).center);
+        }
     }
     
     startPosition.y = rooms->center.y; // coordinate to place player
