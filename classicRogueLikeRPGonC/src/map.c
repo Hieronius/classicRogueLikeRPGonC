@@ -14,6 +14,7 @@ Tile **createMapTiles(void) { // return two dimensional array of MapTiles
         // fill each of the tiles with values
         for (int x = 0; x < MAP_WIDTH; x++) {
             (*(*(tiles + y) + x)).character = '#';
+            (*(*(tiles + y) + x)).color = COLOR_PAIR(VISIBLE_COLOR);
             (*(*(tiles + y) + x)).walkable = false;
         }
     }
