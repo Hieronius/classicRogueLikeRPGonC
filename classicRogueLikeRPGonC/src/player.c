@@ -13,6 +13,7 @@ Entity *createPlayer(Position startPosition) {
     newPlayer->position.y = startPosition.y;
     newPlayer->position.x = startPosition.x;
     newPlayer->character = '@';
+    newPlayer->color = COLOR_PAIR(VISIBLE_COLOR);
     
     return newPlayer;
 }
