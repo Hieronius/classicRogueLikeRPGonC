@@ -22,14 +22,39 @@ Tile **createMapTiles(void) { // return two dimensional array of MapTiles
 }
 
 Position setupMap(void) {
-    Position startPosition = {10, 50};
     
-    for (int y = 5; y < 15; y++) {
-        for (int x = 40; x < 60; x++) {
-            (*(*(map + y) + x)).character = '.';
-            (*(*(map + y) + x)).walkable = true;
+    int y;
+    int x;
+    int height;
+    int width;
+    int numberOfRooms;
+    
+    numberOfRooms = (rand() % 11) + 5; // random number from 5 to 15
+    Room* rooms = calloc(numberOfRooms, sizeof(Room));
+    
+    Position startPosition;
+    
+    // pass height and width to each room
+    for (int i = 0; i < numberOfRooms; i++) {
+        
+        y = (rand() % (MAP_HEIGHT - 10)) + 1;
+        x = (rand() % (MAP_WIDTH - 20)) + 1;
+        height = (rand() % 7) + 3;
+        width = (rand() % 15) + 5;
+        
+        *(rooms + i) = createRoom(y, x, height, width);
+        addRoomToMap(*(rooms + i));
+        
+        if (i > 0) { // i > 0 because we should wait for creation of first room to start monitoring all possible ways to connect second, third and so on rooms
+            connectRoomCenters((*(rooms + i - 1)).center, (*(rooms + i)).center);
         }
     }
+    
+    startPosition.y = rooms->center.y; // coordinate to place player
+    startPosition.x = rooms->center.x; // into the middle of the first room
+    
+    free(rooms); // rooms are already on the map so we can remove it from here
+    
     return startPosition;
 }
 

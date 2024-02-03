@@ -3,6 +3,7 @@
 
 #include <ncurses.h>
 #include <stdlib.h>
+#include <time.h>
 
 // MARK: - Structs
 
@@ -17,11 +18,23 @@ typedef struct {
 } Tile; // represent toles of the map (should be represented by two dimensional-array)
 
 typedef struct {
+    int height;
+    int width;
+    Position position; // upper-left corner of the room
+    Position center; // should be use to connect rooms with each other
+} Room;
+
+typedef struct {
     Position position; // current hero's position
     char character; // representation of the hero on screen
 } Entity;
 
 // MARK: - Methods
+
+// room.c functions
+Room createRoom(int y, int x, int height, int width);
+void addRoomToMap(Room room);
+void connectRoomCenters(Position centerOne, Position centerTwo);
 
 // draw.c functions
 void drawMap(void);
@@ -42,6 +55,10 @@ void freeMap(void);
 Entity *createPlayer(Position startPosition);
 void handleInput(int input);
 void movePlayer(Position newPosition);
+
+// room.c functions
+Room createRoom(int y, int x, int height, int width);
+void addRoomToMap(Room room);
 
 // MARK: - Externals
 
