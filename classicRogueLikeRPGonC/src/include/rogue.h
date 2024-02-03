@@ -34,6 +34,7 @@ typedef struct {
 // room.c functions
 Room createRoom(int y, int x, int height, int width);
 void addRoomToMap(Room room);
+void connectRoomCenters(Position centerOne, Position centerTwo);
 
 // draw.c functions
 void drawMap(void);
