@@ -6,6 +6,14 @@ void cursesSetup(void) {
     noecho(); // will prevent ncurses from immediately drawing on the screen when we press any keys
     
     curs_set(0); // will make our cursor invisible
+    
+    if (has_colors()) { // check whether the terminal supports colors
+        start_color(); // if yes let's initialize ncurse's color system
+        
+        init_pair(VISIBLE_COLOR, COLOR_WHITE, COLOR_BLACK);
+        // first arg - ID, second - foreground color, third - background color
+        init_pair(SEEN_COLOR, COLOR_BLUE, COLOR_BLACK);
+    }
 }
 
 void gameLoop(void) {
