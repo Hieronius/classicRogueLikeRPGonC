@@ -5,7 +5,7 @@ void makeFOV(Entity *player) {
     int y;
     int x;
     int distance;
-    int RADIUS = 15;
+    int RADIUS = 5;
     Position target;
     
     (*(*(map + player->position.y) + player->position.x)).visible = true;
@@ -34,7 +34,7 @@ void makeFOV(Entity *player) {
 void clearFOV(Entity *player) {
     int y;
     int x;
-    int RADIUS = 15;
+    int RADIUS = 5;
     
     for (y = player->position.y - RADIUS; y < player->position.y + RADIUS; y++) {
         
@@ -90,7 +90,7 @@ bool lineOfSight(Position origin, Position target) {
     sign_x = getSign(delta_x);
     sign_y = getSign(delta_y);
     
-    y = target.x;
+    x = target.x;
     y = target.y;
     
     if (abs_delta_x > abs_delta_y) {
