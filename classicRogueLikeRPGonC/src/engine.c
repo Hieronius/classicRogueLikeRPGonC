@@ -1,6 +1,6 @@
 #include "rogue.h"
 
-void cursesSetup(void) {
+bool cursesSetup(void) {
     initscr(); // starts up the ncurses system and allows us to call all other functions in our terminal
     
     noecho(); // will prevent ncurses from immediately drawing on the screen when we press any keys
@@ -8,16 +8,27 @@ void cursesSetup(void) {
     curs_set(0); // will make our cursor invisible
     
     if (has_colors()) { // check whether the terminal supports colors
+        
         start_color(); // if yes let's initialize ncurse's color system
         
         init_pair(VISIBLE_COLOR, COLOR_WHITE, COLOR_BLACK);
         // first arg - ID, second - foreground color, third - background color
         init_pair(SEEN_COLOR, COLOR_BLUE, COLOR_BLACK);
+        
+        return true;
+        
+    } else {
+        
+        mvprintw(20, 50, "Your system dosn't support color. Can't start game!");
+        getch();
+        return false;
     }
 }
 
 void gameLoop(void) {
     int character; // variable to store user's input
+    
+    makeFOV(player);
     
     drawEverything(); // clean the screen, draw map and the player.
     
