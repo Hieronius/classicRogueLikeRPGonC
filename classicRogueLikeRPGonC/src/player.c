@@ -47,7 +47,9 @@ void handleInput(int input) {
 
 void movePlayer(Position newPosition) {
     if ((*(*(map + newPosition.y) + newPosition.x)).walkable) {
+        clearFOV(player);
         player->position.y = newPosition.y;
         player->position.x = newPosition.x;
+        makeFOV(player);
     }
 }
