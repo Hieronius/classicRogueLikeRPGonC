@@ -7,7 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DD8DEA4B2B6A76710098AF62 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = DD8DEA4A2B6A76710098AF62 /* main.c */; };
+		DD8EEF742B6E739100F65141 /* fov.c in Sources */ = {isa = PBXBuildFile; fileRef = DD8EEF732B6E739100F65141 /* fov.c */; };
+		DD97127B2B6C6BB500F8ED2A /* libncurses.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DD97127A2B6C6B0E00F8ED2A /* libncurses.tbd */; };
+		DD97127D2B6C6C2700F8ED2A /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = DD8DEA512B6A7F960098AF62 /* Makefile */; };
+		DD9712802B6C6CC700F8ED2A /* classicRogueLikeRPGonC in Sources */ = {isa = PBXBuildFile; fileRef = DD8DEA472B6A76710098AF62 /* classicRogueLikeRPGonC */; };
+		DD9712812B6C6DAF00F8ED2A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = DD8DEA522B6A7F960098AF62 /* main.c */; };
+		DD9712822B6C6DAF00F8ED2A /* player.c in Sources */ = {isa = PBXBuildFile; fileRef = DD95BA2C2B6B4DC000237AC9 /* player.c */; };
+		DD9712832B6C6DAF00F8ED2A /* engine.c in Sources */ = {isa = PBXBuildFile; fileRef = DD90DBBF2B6BEB02004CD5CB /* engine.c */; };
+		DD9712842B6C6DAF00F8ED2A /* map.c in Sources */ = {isa = PBXBuildFile; fileRef = DD90DBC32B6BF231004CD5CB /* map.c */; };
+		DD9712852B6C6DAF00F8ED2A /* draw.c in Sources */ = {isa = PBXBuildFile; fileRef = DD9712772B6C6A7C00F8ED2A /* draw.c */; };
+		DD9712862B6C6DAF00F8ED2A /* rogue.h in Sources */ = {isa = PBXBuildFile; fileRef = DD95BA292B6B4C9400237AC9 /* rogue.h */; };
+		DD9712872B6C6DB800F8ED2A /* libncurses.tbd in Sources */ = {isa = PBXBuildFile; fileRef = DD97127A2B6C6B0E00F8ED2A /* libncurses.tbd */; };
+		DD9712892B6C814800F8ED2A /* room.c in Sources */ = {isa = PBXBuildFile; fileRef = DD9712882B6C814800F8ED2A /* room.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +35,16 @@
 
 /* Begin PBXFileReference section */
 		DD8DEA472B6A76710098AF62 /* classicRogueLikeRPGonC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = classicRogueLikeRPGonC; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD8DEA4A2B6A76710098AF62 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		DD8DEA512B6A7F960098AF62 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Makefile; path = src/Makefile; sourceTree = SOURCE_ROOT; };
+		DD8DEA522B6A7F960098AF62 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = main.c; path = src/main.c; sourceTree = SOURCE_ROOT; };
+		DD8EEF732B6E739100F65141 /* fov.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fov.c; path = src/fov.c; sourceTree = SOURCE_ROOT; };
+		DD90DBBF2B6BEB02004CD5CB /* engine.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = engine.c; path = src/engine.c; sourceTree = SOURCE_ROOT; };
+		DD90DBC32B6BF231004CD5CB /* map.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = map.c; path = src/map.c; sourceTree = SOURCE_ROOT; };
+		DD95BA292B6B4C9400237AC9 /* rogue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rogue.h; path = src/include/rogue.h; sourceTree = SOURCE_ROOT; };
+		DD95BA2C2B6B4DC000237AC9 /* player.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = player.c; path = src/player.c; sourceTree = SOURCE_ROOT; };
+		DD9712772B6C6A7C00F8ED2A /* draw.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = draw.c; path = src/draw.c; sourceTree = SOURCE_ROOT; };
+		DD97127A2B6C6B0E00F8ED2A /* libncurses.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libncurses.tbd; path = usr/lib/libncurses.tbd; sourceTree = SDKROOT; };
+		DD9712882B6C814800F8ED2A /* room.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = room.c; path = src/room.c; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD97127B2B6C6BB500F8ED2A /* libncurses.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +64,7 @@
 			children = (
 				DD8DEA492B6A76710098AF62 /* classicRogueLikeRPGonC */,
 				DD8DEA482B6A76710098AF62 /* Products */,
+				DD9712792B6C6B0E00F8ED2A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +79,25 @@
 		DD8DEA492B6A76710098AF62 /* classicRogueLikeRPGonC */ = {
 			isa = PBXGroup;
 			children = (
-				DD8DEA4A2B6A76710098AF62 /* main.c */,
+				DD8DEA522B6A7F960098AF62 /* main.c */,
+				DD95BA2C2B6B4DC000237AC9 /* player.c */,
+				DD90DBBF2B6BEB02004CD5CB /* engine.c */,
+				DD90DBC32B6BF231004CD5CB /* map.c */,
+				DD9712772B6C6A7C00F8ED2A /* draw.c */,
+				DD9712882B6C814800F8ED2A /* room.c */,
+				DD8EEF732B6E739100F65141 /* fov.c */,
+				DD95BA292B6B4C9400237AC9 /* rogue.h */,
+				DD8DEA512B6A7F960098AF62 /* Makefile */,
 			);
 			path = classicRogueLikeRPGonC;
+			sourceTree = "<group>";
+		};
+		DD9712792B6C6B0E00F8ED2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD97127A2B6C6B0E00F8ED2A /* libncurses.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +157,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD8DEA4B2B6A76710098AF62 /* main.c in Sources */,
+				DD8EEF742B6E739100F65141 /* fov.c in Sources */,
+				DD9712892B6C814800F8ED2A /* room.c in Sources */,
+				DD9712872B6C6DB800F8ED2A /* libncurses.tbd in Sources */,
+				DD9712812B6C6DAF00F8ED2A /* main.c in Sources */,
+				DD9712822B6C6DAF00F8ED2A /* player.c in Sources */,
+				DD9712832B6C6DAF00F8ED2A /* engine.c in Sources */,
+				DD9712842B6C6DAF00F8ED2A /* map.c in Sources */,
+				DD9712852B6C6DAF00F8ED2A /* draw.c in Sources */,
+				DD9712862B6C6DAF00F8ED2A /* rogue.h in Sources */,
+				DD9712802B6C6CC700F8ED2A /* classicRogueLikeRPGonC in Sources */,
+				DD97127D2B6C6C2700F8ED2A /* Makefile in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
