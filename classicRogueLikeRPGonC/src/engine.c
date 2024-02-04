@@ -11,9 +11,10 @@ bool cursesSetup(void) {
         
         start_color(); // if yes let's initialize ncurse's color system
         
-        init_pair(VISIBLE_COLOR, COLOR_WHITE, COLOR_BLACK);
         // first arg - ID, second - foreground color, third - background color
-        init_pair(SEEN_COLOR, COLOR_BLUE, COLOR_BLACK);
+        init_pair(VISIBLE_COLOR, COLOR_WHITE, COLOR_BLACK);
+         init_pair(SEEN_COLOR, COLOR_BLUE, COLOR_BLACK); // makes fog of war blue
+        // init_pair(SEEN_COLOR, COLOR_BLACK, COLOR_BLACK); // removes fog of war entirely
         
         return true;
         
