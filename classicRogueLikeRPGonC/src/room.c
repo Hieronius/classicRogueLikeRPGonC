@@ -47,6 +47,7 @@ void connectRoomCenters(Position centerOne, Position centerTwo) {
         // each iteration draw walkable tile of new coordinate we have reached to
         (*(*(map + temp.y) + temp.x)).character = '.';
         (*(*(map + temp.y) + temp.x)).walkable = true;
+        (*(*(map + temp.y) + temp.x)).transparent = true;
     }
 }
 
@@ -55,6 +56,7 @@ void addRoomToMap(Room room) {
         for (int x = room.position.x; x < room.position.x + room.width; x++) {
             (*(*(map + y) + x)).character = '.';
             (*(*(map + y) + x)).walkable = true;
+            (*(*(map + y) + x)).transparent = true;
         }
     }
 }
