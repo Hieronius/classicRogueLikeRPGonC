@@ -4,6 +4,7 @@
 #include <ncurses.h>
 #include <stdlib.h>
 #include <time.h>
+#include <math.h>
 
 // color pairs
 #define VISIBLE_COLOR 1 
@@ -20,6 +21,9 @@ typedef struct {
     char character; // character to represent a specific tiles on the map
     int color; // store a result of ncurses function COLOR_PAIR()
     bool walkable; // player can walk on floors but not  through the walls
+    bool transparent;
+    bool visible;
+    bool seen;
 } Tile; // represent toles of the map (should be represented by two dimensional-array)
 
 typedef struct {
@@ -42,13 +46,21 @@ Room createRoom(int y, int x, int height, int width);
 void addRoomToMap(Room room);
 void connectRoomCenters(Position centerOne, Position centerTwo);
 
+// fov.c functions
+void makeFOV(Entity *player);
+void clearFOV(Entity *player);
+int getDistance(Position origin, Position target);
+bool isInMap(int y, int x);
+bool lineOfSight(Position origin, Position target);
+int getSign(int a);
+
 // draw.c functions
 void drawMap(void);
 void drawEntity(Entity* entity);
 void drawEverything(void);
 
 // engine.c functions
-void cursesSetup(void);
+bool cursesSetup(void);
 void gameLoop(void);
 void closeGame(void);
 
