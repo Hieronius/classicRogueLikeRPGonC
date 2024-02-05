@@ -26,15 +26,19 @@ void handleInput(int input) {
     // process the input
     switch(input) {
         case 'w': // move up
+        case 'W':
             newPosition.y--;
             break;
         case 's': // move down
+        case 'S':
             newPosition.y++;
             break;
         case 'a': // move left
+        case 'A':
             newPosition.x--;
             break;
         case 'd': // move right
+        case 'D':
             newPosition.x++;
             break;
         default:
