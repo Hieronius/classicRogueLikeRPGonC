@@ -31,6 +31,8 @@ typedef struct {
     int width;
     Position position; // upper-left corner of the room
     Position center; // should be use to connect rooms with each other
+    // Monster ** monsters;
+    // Item ** items; // i should understand why we need **array here
 } Room;
 
 typedef struct {
