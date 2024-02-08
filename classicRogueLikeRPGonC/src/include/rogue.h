@@ -9,6 +9,9 @@
 // color pairs
 #define VISIBLE_COLOR 1 
 #define SEEN_COLOR 2
+#define PLAYER_COLOR 3
+#define ENEMY_COLOR 4
+#define ITEMS_COLOR 5
 
 // MARK: - Structs
 
@@ -43,6 +46,14 @@ typedef struct  Hero {
     int color; // store a result of ncurses function COLOR_PAIR()
 } Hero;
 
+typedef struct Enemy {
+    Position position;
+    char character;
+    int health;
+    int attack;
+    int color;
+} Enemy;
+
 // MARK: - Methods
 
 // room.c functions
@@ -60,7 +71,7 @@ int getSign(int a);
 
 // draw.c functions
 void drawMap(void);
-void drawEntity(Hero* entity);
+void drawHero(Hero* hero);
 void drawEverything(void);
 
 // engine.c functions
