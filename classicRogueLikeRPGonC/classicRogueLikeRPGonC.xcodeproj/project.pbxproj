@@ -19,6 +19,7 @@
 		DD9712862B6C6DAF00F8ED2A /* rogue.h in Sources */ = {isa = PBXBuildFile; fileRef = DD95BA292B6B4C9400237AC9 /* rogue.h */; };
 		DD9712872B6C6DB800F8ED2A /* libncurses.tbd in Sources */ = {isa = PBXBuildFile; fileRef = DD97127A2B6C6B0E00F8ED2A /* libncurses.tbd */; };
 		DD9712892B6C814800F8ED2A /* room.c in Sources */ = {isa = PBXBuildFile; fileRef = DD9712882B6C814800F8ED2A /* room.c */; };
+		DDA61C142B746CD40099F9DD /* enemy.c in Sources */ = {isa = PBXBuildFile; fileRef = DDA61C132B746CD40099F9DD /* enemy.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +46,7 @@
 		DD9712772B6C6A7C00F8ED2A /* draw.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = draw.c; path = src/draw.c; sourceTree = SOURCE_ROOT; };
 		DD97127A2B6C6B0E00F8ED2A /* libncurses.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libncurses.tbd; path = usr/lib/libncurses.tbd; sourceTree = SDKROOT; };
 		DD9712882B6C814800F8ED2A /* room.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = room.c; path = src/room.c; sourceTree = SOURCE_ROOT; };
+		DDA61C132B746CD40099F9DD /* enemy.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = enemy.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				DD8DEA522B6A7F960098AF62 /* main.c */,
 				DD95BA2C2B6B4DC000237AC9 /* player.c */,
+				DDA61C132B746CD40099F9DD /* enemy.c */,
 				DD90DBBF2B6BEB02004CD5CB /* engine.c */,
 				DD90DBC32B6BF231004CD5CB /* map.c */,
 				DD9712772B6C6A7C00F8ED2A /* draw.c */,
@@ -163,6 +166,7 @@
 				DD9712812B6C6DAF00F8ED2A /* main.c in Sources */,
 				DD9712822B6C6DAF00F8ED2A /* player.c in Sources */,
 				DD9712832B6C6DAF00F8ED2A /* engine.c in Sources */,
+				DDA61C142B746CD40099F9DD /* enemy.c in Sources */,
 				DD9712842B6C6DAF00F8ED2A /* map.c in Sources */,
 				DD9712852B6C6DAF00F8ED2A /* draw.c in Sources */,
 				DD9712862B6C6DAF00F8ED2A /* rogue.h in Sources */,
