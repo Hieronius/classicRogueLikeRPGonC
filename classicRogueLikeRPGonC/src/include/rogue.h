@@ -72,6 +72,7 @@ int getSign(int a);
 // draw.c functions
 void drawMap(void);
 void drawHero(Hero* hero);
+void drawEnemy(Enemy *enemy);
 void drawEverything(void);
 
 // engine.c functions
@@ -83,6 +84,9 @@ void closeGame(void);
 Tile **createMapTiles(void);
 Position setupMap(void);
 void freeMap(void);
+
+// enemy.c functions
+Enemy *createEnemy(Position startPosition);
 
 // player.c functions
 Hero *createPlayer(Position startPosition);
@@ -100,6 +104,8 @@ extern const int MAP_HEIGHT;
 extern const int MAP_WIDTH;
 extern Tile **map; // two asterisks because our map should be represented by two-dimensional array;
 extern Hero *player;
+extern Enemy **enemiesArmy;
+extern Enemy *singleEnemy;
 
 
 #endif /* rogue_h */

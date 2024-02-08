@@ -52,4 +52,5 @@ void gameLoop(void) {
 void closeGame(void) {
     endwin(); // ncurses function that closes ncurses in our terminal
     free(player); // been allocted with calloc()
+    free(singleEnemy);
 }

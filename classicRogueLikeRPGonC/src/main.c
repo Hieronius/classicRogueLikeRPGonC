@@ -3,7 +3,10 @@
 const int MAP_HEIGHT = 25;
 const int MAP_WIDTH = 75;
 
-Hero *player; // external variable from rogue.h
+// external variable from rogue.h
+Hero *player;
+Enemy **enemiesArmy;
+Enemy *singleEnemy;
 Tile **map;
 
 int main(void) {
@@ -20,6 +23,7 @@ int main(void) {
         map = createMapTiles();
         startPosition = setupMap();
         player = createPlayer(startPosition);
+        singleEnemy = createEnemy(startPosition);
         
         gameLoop();
         closeGame();

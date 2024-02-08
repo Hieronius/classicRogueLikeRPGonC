@@ -21,8 +21,13 @@ void drawHero(Hero *hero) {
     mvaddch(hero->position.y, hero->position.x, hero->character | hero->color); // returns the same character but with different color
 }
 
+void drawEnemy(Enemy *enemy) {
+    mvaddch(enemy->position.y, enemy->position.x, enemy->character | enemy->color);
+}
+
 void drawEverything(void) {
     clear();
     drawMap();
     drawHero(player);
+    drawEnemy(singleEnemy);
 }
