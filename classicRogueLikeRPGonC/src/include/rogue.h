@@ -35,11 +35,13 @@ typedef struct Room {
     // Item ** items; // i should understand why we need **array here
 } Room;
 
-typedef struct  Entity {
+typedef struct  Hero {
     Position position; // current hero's position
     char character; // representation of the hero on screen
+    int health;
+    int attack;
     int color; // store a result of ncurses function COLOR_PAIR()
-} Entity;
+} Hero;
 
 // MARK: - Methods
 
@@ -49,8 +51,8 @@ void addRoomToMap(Room room);
 void connectRoomCenters(Position centerOne, Position centerTwo);
 
 // fov.c functions
-void makeFOV(Entity *player);
-void clearFOV(Entity *player);
+void makeFOV(Hero *player);
+void clearFOV(Hero *player);
 int getDistance(Position origin, Position target);
 bool isInMap(int y, int x);
 bool lineOfSight(Position origin, Position target);
@@ -58,7 +60,7 @@ int getSign(int a);
 
 // draw.c functions
 void drawMap(void);
-void drawEntity(Entity* entity);
+void drawEntity(Hero* entity);
 void drawEverything(void);
 
 // engine.c functions
@@ -72,7 +74,7 @@ Position setupMap(void);
 void freeMap(void);
 
 // player.c functions
-Entity *createPlayer(Position startPosition);
+Hero *createPlayer(Position startPosition);
 void handleInput(int input);
 void movePlayer(Position newPosition);
 
@@ -86,7 +88,7 @@ void addRoomToMap(Room room);
 extern const int MAP_HEIGHT;
 extern const int MAP_WIDTH;
 extern Tile **map; // two asterisks because our map should be represented by two-dimensional array;
-extern Entity *player;
+extern Hero *player;
 
 
 #endif /* rogue_h */

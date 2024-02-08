@@ -1,7 +1,7 @@
 #include "rogue.h"
 
 // Field Of View about
-void makeFOV(Entity *player) {
+void makeFOV(Hero *player) {
     int y;
     int x;
     int distance;
@@ -31,7 +31,7 @@ void makeFOV(Entity *player) {
     }
 }
 
-void clearFOV(Entity *player) {
+void clearFOV(Hero *player) {
     int y;
     int x;
     int RADIUS = 5;

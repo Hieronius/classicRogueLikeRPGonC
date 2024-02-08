@@ -17,7 +17,7 @@ void drawMap(void) {
     }
 }
 
-void drawEntity(Entity *entity) {
+void drawEntity(Hero *entity) {
     mvaddch(entity->position.y, entity->position.x, entity->character | entity->color); // returns the same character but with different color
 }
 

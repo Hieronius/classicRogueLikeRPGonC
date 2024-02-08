@@ -3,7 +3,7 @@
 const int MAP_HEIGHT = 25;
 const int MAP_WIDTH = 75;
 
-Entity *player; // external variable from rogue.h
+Hero *player; // external variable from rogue.h
 Tile **map;
 
 int main(void) {
