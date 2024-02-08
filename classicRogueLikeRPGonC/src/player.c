@@ -15,7 +15,8 @@ Hero *createPlayer(Position startPosition) {
     newPlayer->character = '@';
     newPlayer->health = 100;
     newPlayer->attack = 10;
-    newPlayer->color = COLOR_PAIR(VISIBLE_COLOR);
+    // newPlayer->color = COLOR_PAIR(VISIBLE_COLOR);
+    newPlayer->color = COLOR_PAIR(PLAYER_COLOR);
     
     return newPlayer;
 }
