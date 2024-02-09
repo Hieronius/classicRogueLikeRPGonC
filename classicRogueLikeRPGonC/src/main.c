@@ -5,8 +5,8 @@ const int MAP_WIDTH = 75;
 
 // external variable from rogue.h
 Hero *player;
-Enemy **enemiesArmy;
-Enemy *singleEnemy;
+ Enemy **enemiesArmy;
+ Enemy *singleEnemy;
 Tile **map;
 
 int main(void) {
