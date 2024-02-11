@@ -15,6 +15,8 @@ bool cursesSetup(void) {
         init_pair(VISIBLE_COLOR, COLOR_WHITE, COLOR_BLACK);
          init_pair(SEEN_COLOR, COLOR_BLUE, COLOR_BLACK); // makes fog of war blue
         // init_pair(SEEN_COLOR, COLOR_BLACK, COLOR_BLACK); // removes fog of war entirely
+        init_pair(PLAYER_COLOR, COLOR_GREEN, COLOR_BLACK);
+        init_pair(ENEMY_COLOR, COLOR_RED, COLOR_BLACK);
         
         return true;
         
@@ -50,4 +52,5 @@ void gameLoop(void) {
 void closeGame(void) {
     endwin(); // ncurses function that closes ncurses in our terminal
     free(player); // been allocted with calloc()
+    free(singleEnemy);
 }

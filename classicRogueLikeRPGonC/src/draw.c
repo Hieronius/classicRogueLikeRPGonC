@@ -17,12 +17,17 @@ void drawMap(void) {
     }
 }
 
-void drawEntity(Entity *entity) {
-    mvaddch(entity->position.y, entity->position.x, entity->character | entity->color); // returns the same character but with different color
+void drawHero(Hero *hero) {
+    mvaddch(hero->position.y, hero->position.x, hero->character | hero->color); // returns the same character but with different color
+}
+
+void drawEnemy(Enemy *enemy) {
+    mvaddch(enemy->position.y, enemy->position.x, enemy->character | enemy->color);
 }
 
 void drawEverything(void) {
     clear();
     drawMap();
-    drawEntity(player);
+    drawHero(player);
+    drawEnemy(singleEnemy);
 }

@@ -2,18 +2,21 @@
 
 // function get's position and returns pointer to an Entity
 // We create the player as a pointer to Entity in order to be able to modify his component variables in function calls
-Entity *createPlayer(Position startPosition) {
+Hero *createPlayer(Position startPosition) {
     
     // declare the newPlayer variable and dynamically allocates the appropriate memory for that pointer
     // We use calloc instead of malloc because it's more flexiable.
     // malloc gives us a fixed block of code
     // calloc give us as many memory as need for an entity
-    Entity *newPlayer = calloc(1, sizeof(Entity));
+    Hero *newPlayer = calloc(1, sizeof(Hero));
     
     newPlayer->position.y = startPosition.y;
     newPlayer->position.x = startPosition.x;
     newPlayer->character = '@';
-    newPlayer->color = COLOR_PAIR(VISIBLE_COLOR);
+    newPlayer->health = 100;
+    newPlayer->attack = 10;
+    // newPlayer->color = COLOR_PAIR(VISIBLE_COLOR);
+    newPlayer->color = COLOR_PAIR(PLAYER_COLOR);
     
     return newPlayer;
 }
